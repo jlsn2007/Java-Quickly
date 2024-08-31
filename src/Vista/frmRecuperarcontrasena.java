@@ -4,6 +4,9 @@
  */
 package Vista;
 
+import Controlador.ctrlRecuperarcontrasena;
+import Modelo.Usuario;
+
 /**
  *
  * @author DELL
@@ -15,6 +18,14 @@ public class frmRecuperarcontrasena extends javax.swing.JFrame {
      */
     public frmRecuperarcontrasena() {
         initComponents();
+    }
+    
+    public static void initfrmRecucontra(){
+        Usuario Modelo = new Usuario();
+        frmRecuperarcontrasena Vista = new frmRecuperarcontrasena();
+        ctrlRecuperarcontrasena Controlador = new ctrlRecuperarcontrasena(Modelo, Vista);
+        
+        Vista.setVisible(true);
     }
 
     /**
@@ -135,7 +146,7 @@ public class frmRecuperarcontrasena extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmRecuperarcontrasena().setVisible(true);
+                initfrmRecucontra();
             }
         });
     }

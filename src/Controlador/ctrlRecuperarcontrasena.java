@@ -1,11 +1,13 @@
 package Controlador;
 
+import Modelo.EnviarCorreos;
 import Modelo.Usuario;
 import Vista.frmRecuperarcontrasena;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.Random;
 
 
 public class ctrlRecuperarcontrasena implements MouseListener, KeyListener{
@@ -25,7 +27,19 @@ public class ctrlRecuperarcontrasena implements MouseListener, KeyListener{
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        if(e.getSource() == VistaRecucontrasena.btnSiguiente){
+        
+             Random random = new Random();
+        
+            int numeroAleatorio = 1000 + random.nextInt(9000);
 
+            String recipient = VistaRecucontrasena.txtCorreorecu.getText();
+            String subject = "Recuperacion de contraseña";
+            String content = "Este es el codigo de recuperacion" + numeroAleatorio;
+
+            EnviarCorreos.enviarCorreo(recipient, subject, content);
+
+        }
     }
 
     @Override
