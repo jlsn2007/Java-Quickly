@@ -2,6 +2,8 @@ package Modelo;
 
 import java.sql.*;
 import java.util.UUID;
+import javax.swing.JComboBox;
+
 
 public class Usuario {
     
@@ -124,4 +126,37 @@ public class Usuario {
         
         return resultado;
     }
+
+    public void setCorreo(String text) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
+    public Usuario(String uuid, String Nombre) {
+this.UUID_Usuario = uuid; 
+this.nombre = Nombre;
 }
+ 
+@Override 
+public String toString() {
+return nombre;
+}
+
+public void CargarComboboxRegistroCuenta(JComboBox comboBox) {
+Connection conexion = ClaseConexion.getConexion();
+try {
+Statement statement = conexion.createStatement ();
+ResultSet rs = statement.executeQuery("Select * from tbUsuario");
+while (rs.next ()) {
+String uuid = rs.getString("UUID_Usuario");
+String Nombre = rs.getString("Nombre_usuario");
+comboBox.addItem(new Usuario(uuid,Nombre));
+}
+}
+catch(SQLException ex) {
+ex.printStackTrace();
+}
+
+}
+}
+
+
