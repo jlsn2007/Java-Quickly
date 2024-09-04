@@ -20,11 +20,22 @@ public class ctrlCodigoverificacion implements MouseListener, KeyListener{
         
         VisCodigoverificacion.txtCodigo.addMouseListener(this);
         VisCodigoverificacion.btnVerificarcodigo.addMouseListener(this);
+        VisCodigoverificacion.btnVolvercodv.addMouseListener(this);
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
-
+        if (e.getSource() == VisCodigoverificacion.btnVolvercodv) {
+            Vista.frmRecuperarcontrasena.initfrmRecucontra();
+            VisCodigoverificacion.dispose();
+            
+        }
+        
+        if (e.getSource() == VisCodigoverificacion.btnVerificarcodigo) {
+            Vista.frmReestablecercontrasena.initfrmRescontra();
+            VisCodigoverificacion.dispose();
+            
+        }
     }
 
     @Override

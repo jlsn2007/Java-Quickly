@@ -20,19 +20,16 @@ public class ctrlContrareestablecida implements MouseListener, KeyListener{
         this.Vistacontrares = frmcontrares;
         
         frmcontrares.btnempezar.addMouseListener(this);
+   
         
-       
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
         
         if(e.getSource() == Vistacontrares.btnempezar) {
-            Vistacontrares.setVisible(false);
-
-            frmLogin VistaLogin = new frmLogin();
-
-            Vistacontrares.setVisible(true);
+            Vista.frmLogin.initfrmLogin();
+            Vistacontrares.dispose();
         }
         
     }

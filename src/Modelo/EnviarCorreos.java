@@ -39,7 +39,7 @@ public class EnviarCorreos {
             message.setText(content);
 
             Transport.send(message);
-            System.out.println("Correo enviado con éxito");
+            System.out.println("Correo enviado éxitosamente");
         } catch (MessagingException e) {
             e.printStackTrace();
         }

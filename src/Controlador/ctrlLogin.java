@@ -7,6 +7,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import javax.swing.JOptionPane;
 
 
 public class ctrlLogin implements MouseListener, KeyListener{
@@ -25,17 +26,36 @@ public class ctrlLogin implements MouseListener, KeyListener{
         frmlogin.txtContrasena.addMouseListener(this);
         
     }
+    
+    
 
     @Override
     public void mouseClicked(MouseEvent e) {
         
-        if (e.getSource() == Vistalogin.btntxtRecucontra) {
-            Vistalogin.setVisible(false);
+        if (e.getSource() == Vistalogin.btnSiguiente) {
 
-            frmRecuperarcontrasena recuperarForm = new frmRecuperarcontrasena();
+            if (!Vistalogin.txtCorreo.getText().contains("@") || !Vistalogin.txtCorreo.getText().contains(".com")) {
+                JOptionPane.showMessageDialog(Vistalogin, "Ingrese un correo válido");
+                return;
+            } 
+            
+            if (Vistalogin.txtContrasena.getText().length() < 7) {
 
-            recuperarForm.setVisible(true);
+                JOptionPane.showMessageDialog(Vistalogin, "La contraseña debe tener más de 7 caracteres");
+                return;
+            } 
+            
+            else {
+                Vista.frmMenuAdmin.initfrmMenuAdmin();
+                Vistalogin.dispose();
+            }
         }
+        
+        if (e.getSource() == Vistalogin.btntxtRecucontra) {
+            Vista.frmRecuperarcontrasena.initfrmRecucontra();
+            Vistalogin.dispose();
+        }
+
     }
 
     @Override

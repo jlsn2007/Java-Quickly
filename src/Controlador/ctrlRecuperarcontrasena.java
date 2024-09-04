@@ -8,6 +8,7 @@ import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.Random;
+import javax.swing.JOptionPane;
 
 
 public class ctrlRecuperarcontrasena implements MouseListener, KeyListener{
@@ -22,14 +23,21 @@ public class ctrlRecuperarcontrasena implements MouseListener, KeyListener{
         
         VisRecuperarcontrasena.txtCorreorecu.addMouseListener(this);
         VisRecuperarcontrasena.btnSiguiente.addMouseListener(this);
+        VisRecuperarcontrasena.Volverrecu.addMouseListener(this);
     }
     
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        
+        if (!VistaRecucontrasena.txtCorreorecu.getText().contains("@") || !VistaRecucontrasena.txtCorreorecu.getText().contains(".com")) {
+                JOptionPane.showMessageDialog(VistaRecucontrasena, "Ingrese un correo válido");
+                return;
+            } 
+        
         if(e.getSource() == VistaRecucontrasena.btnSiguiente){
         
-             Random random = new Random();
+            Random random = new Random();
         
             int numeroAleatorio = 1000 + random.nextInt(9000);
 
@@ -38,7 +46,19 @@ public class ctrlRecuperarcontrasena implements MouseListener, KeyListener{
             String content = "Este es el codigo de recuperacion" + numeroAleatorio;
 
             EnviarCorreos.enviarCorreo(recipient, subject, content);
+            
+            Vista.frmCodigoverificacion.initfrmCodigoveri();
+            VistaRecucontrasena.dispose();
+            return;
 
+        }
+        
+       
+        
+        if (e.getSource() == VistaRecucontrasena.Volverrecu) {
+            Vista.frmLogin.initfrmLogin();
+            VistaRecucontrasena.dispose();
+            return;
         }
     }
 

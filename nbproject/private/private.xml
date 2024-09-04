@@ -3,9 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Java_Quickly/src/Controlador/ctrlContrareestablecida.java</file>
-            <file>file:/C:/Java_Quickly/src/Modelo/Usuario.java</file>
-            <file>file:/C:/Java_Quickly/src/Modelo/EnviarCorreos.java</file>
+            <file>file:/C:/Java_Quickly/src/Vista/frmCodigoverificacion.java</file>
+            <file>file:/C:/Java_Quickly/src/Controlador/ctrlCodigoverificacion.java</file>
+            <file>file:/C:/Java_Quickly/src/Controlador/ctrlReestablecercontrasena.java</file>
+            <file>file:/C:/Java_Quickly/src/Vista/frmRecuperarcontrasena.java</file>
+            <file>file:/C:/Java_Quickly/src/Vista/panelConfiguracion.java</file>
+            <file>file:/C:/Java_Quickly/src/Vista/panelCalendario.java</file>
+            <file>file:/C:/Java_Quickly/src/Controlador/ctrlRecuperarcontrasena.java</file>
+            <file>file:/C:/Java_Quickly/src/Controlador/ctrlLogin.java</file>
+            <file>file:/C:/Java_Quickly/src/Vista/frmReestablecercontrasena.java</file>
+            <file>file:/C:/Java_Quickly/src/Vista/frmMenuAdmin.java</file>
         </group>
     </open-files>
 </project-private>
