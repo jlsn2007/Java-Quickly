@@ -27,9 +27,9 @@ public class frmMenuAdmin extends javax.swing.JFrame {
         btnHome = new javax.swing.JButton();
         btnCalendar = new javax.swing.JButton();
         btnSettings = new javax.swing.JButton();
+        btnmenuagus = new javax.swing.JButton();
         jpContenedor = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,6 +44,11 @@ public class frmMenuAdmin extends javax.swing.JFrame {
         btnSettings.setBackground(new java.awt.Color(20, 31, 36));
         btnSettings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ajustes.png"))); // NOI18N
 
+        btnmenuagus.setBackground(new java.awt.Color(204, 204, 255));
+        btnmenuagus.setFont(new java.awt.Font("Inter 18pt ExtraBold", 0, 12)); // NOI18N
+        btnmenuagus.setForeground(new java.awt.Color(102, 102, 255));
+        btnmenuagus.setText("Agregar Usuarios");
+
         javax.swing.GroupLayout jpMenuLayout = new javax.swing.GroupLayout(jpMenu);
         jpMenu.setLayout(jpMenuLayout);
         jpMenuLayout.setHorizontalGroup(
@@ -55,29 +60,32 @@ public class frmMenuAdmin extends javax.swing.JFrame {
                 .addComponent(btnCalendar)
                 .addGap(42, 42, 42)
                 .addComponent(btnSettings, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(669, Short.MAX_VALUE))
+                .addGap(52, 52, 52)
+                .addComponent(btnmenuagus)
+                .addContainerGap(480, Short.MAX_VALUE))
         );
         jpMenuLayout.setVerticalGroup(
             jpMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpMenuLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jpMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnHome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnCalendar, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
-                    .addComponent(btnSettings, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jpMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpMenuLayout.createSequentialGroup()
+                        .addGroup(jpMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnHome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnCalendar, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+                            .addComponent(btnSettings, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(btnmenuagus, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jpContenedor.setBackground(new java.awt.Color(255, 255, 255));
         jpContenedor.setLayout(new java.awt.BorderLayout());
 
-        jLabel1.setFont(new java.awt.Font("Inter 24pt ExtraBold", 0, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Inter 24pt ExtraBold", 0, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("¡Bienvenido a Quickly!");
         jpContenedor.add(jLabel1, java.awt.BorderLayout.CENTER);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Quickly.png"))); // NOI18N
-        jpContenedor.add(jLabel2, java.awt.BorderLayout.PAGE_START);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -137,8 +145,8 @@ public class frmMenuAdmin extends javax.swing.JFrame {
     public javax.swing.JButton btnCalendar;
     public javax.swing.JButton btnHome;
     public javax.swing.JButton btnSettings;
+    public javax.swing.JButton btnmenuagus;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     public javax.swing.JPanel jpContenedor;
     private javax.swing.JPanel jpMenu;
     // End of variables declaration//GEN-END:variables

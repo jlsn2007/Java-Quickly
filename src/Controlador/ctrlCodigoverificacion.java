@@ -6,6 +6,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import javax.swing.JOptionPane;
 
 
 public class ctrlCodigoverificacion implements MouseListener, KeyListener{
@@ -26,6 +27,13 @@ public class ctrlCodigoverificacion implements MouseListener, KeyListener{
     @Override
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == VisCodigoverificacion.btnVolvercodv) {
+            
+            if (VisCodigoverificacion.txtCodigo.getText().isEmpty()) {
+
+                JOptionPane.showMessageDialog(VisCodigoverificacion, "Ingrése el código que se le ha proporcionado");
+                return;
+            } 
+            
             Vista.frmRecuperarcontrasena.initfrmRecucontra();
             VisCodigoverificacion.dispose();
             

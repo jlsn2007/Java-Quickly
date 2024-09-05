@@ -48,12 +48,13 @@ public class ctrlReestablecercontrasena implements MouseListener, KeyListener{
                 JOptionPane.showMessageDialog(VistafrmRescontra, "La contraseña debe tener más de 7 caracteres");
                 return;
             } 
-            
-            else {
+                      
+        }
+        
+        else {
                 Vista.frmContrasenarestablecida.initfrmContrares();
                 VistafrmRescontra.dispose();
             }
-        }
     }
 
     @Override

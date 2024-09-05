@@ -1,6 +1,7 @@
 package Controlador;
 
 import Vista.frmMenuAdmin;
+import Vista.panelAgregarUsuarios;
 import Vista.panelCalendario;
 import Vista.panelConfiguracion;
 import Vista.panelPrincipaladmin;
@@ -21,10 +22,13 @@ public class ctrlfrmMenuAdmin implements MouseListener{
         vista.btnHome.addMouseListener(this);
         vista.btnCalendar.addMouseListener(this);
         vista.btnSettings.addMouseListener(this);
+        vista.btnmenuagus.addMouseListener(this);
+        
         Panel.btnPagregarus.addMouseListener(this);
         Panel.btnPasishoras.addMouseListener(this);
         Panel.btnPverhishoras.addMouseListener(this);
         Panel.btnPverus.addMouseListener(this);
+        Panel.btnPagregarus.addMouseListener(this);
     }
 
     @Override
@@ -37,6 +41,7 @@ public class ctrlfrmMenuAdmin implements MouseListener{
             vista.jpContenedor.add(objpadmin);
             vista.jpContenedor.revalidate();
             vista.jpContenedor.repaint();
+            
         }
         
         if(e.getSource() == vista.btnCalendar){
@@ -53,6 +58,15 @@ public class ctrlfrmMenuAdmin implements MouseListener{
             
             vista.jpContenedor.removeAll();
             vista.jpContenedor.add(objconfig);
+            vista.jpContenedor.revalidate();
+            vista.jpContenedor.repaint();
+        }
+        
+        if(e.getSource() == vista.btnmenuagus){
+            panelAgregarUsuarios objPanagregarUsuarios = new panelAgregarUsuarios();
+            
+            vista.jpContenedor.removeAll();
+            vista.jpContenedor.add(objPanagregarUsuarios);
             vista.jpContenedor.revalidate();
             vista.jpContenedor.repaint();
         }
