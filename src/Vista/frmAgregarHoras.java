@@ -1,13 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Vista;
 
-/**
- *
- * @author Samuel pc
- */
+import Modelo.TextPrompt;
+import java.awt.Color;
+
+
+
 public class frmAgregarHoras extends javax.swing.JFrame {
 
     /**
@@ -15,6 +12,10 @@ public class frmAgregarHoras extends javax.swing.JFrame {
      */
     public frmAgregarHoras() {
         initComponents();
+        TextPrompt nomevent = new TextPrompt ("Nombre evento", txtNombreEvento);
+        TextPrompt fecha = new TextPrompt ("Fecha", txtFechaAgregarHoras);
+        TextPrompt horaentra = new TextPrompt ("Hora entrada", txtHoraEntrada);
+        TextPrompt horasalida = new TextPrompt ("Hora salida", txtHoraSalida);
     }
 
     /**
@@ -47,19 +48,20 @@ public class frmAgregarHoras extends javax.swing.JFrame {
 
         txtFechaAgregarHoras.setBackground(new java.awt.Color(204, 204, 204));
         txtFechaAgregarHoras.setForeground(new java.awt.Color(51, 51, 51));
-        txtFechaAgregarHoras.setText("Fecha");
 
         txtNombreEvento.setBackground(new java.awt.Color(204, 204, 204));
         txtNombreEvento.setForeground(new java.awt.Color(51, 51, 51));
-        txtNombreEvento.setText("Nombre evento");
+        txtNombreEvento.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtNombreEventoFocusGained(evt);
+            }
+        });
 
         txtHoraEntrada.setBackground(new java.awt.Color(204, 204, 204));
         txtHoraEntrada.setForeground(new java.awt.Color(51, 51, 51));
-        txtHoraEntrada.setText("Hora entrada");
 
         txtHoraSalida.setBackground(new java.awt.Color(204, 204, 204));
         txtHoraSalida.setForeground(new java.awt.Color(51, 51, 51));
-        txtHoraSalida.setText("Hora salida");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 102, 102));
@@ -153,6 +155,10 @@ public class frmAgregarHoras extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtNombreEventoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNombreEventoFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreEventoFocusGained
 
     /**
      * @param args the command line arguments
