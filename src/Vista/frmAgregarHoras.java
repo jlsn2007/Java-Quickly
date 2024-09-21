@@ -13,7 +13,6 @@ public class frmAgregarHoras extends javax.swing.JFrame {
     public frmAgregarHoras() {
         initComponents();
         TextPrompt nomevent = new TextPrompt ("Nombre evento", txtNombreEvento);
-        TextPrompt fecha = new TextPrompt ("Fecha", txtFechaAgregarHoras);
         TextPrompt horaentra = new TextPrompt ("Hora entrada", txtHoraEntrada);
         TextPrompt horasalida = new TextPrompt ("Hora salida", txtHoraSalida);
     }
@@ -27,9 +26,9 @@ public class frmAgregarHoras extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jCalendar1 = new com.toedter.calendar.JCalendar();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        txtFechaAgregarHoras = new javax.swing.JTextField();
         txtNombreEvento = new javax.swing.JTextField();
         txtHoraEntrada = new javax.swing.JTextField();
         txtHoraSalida = new javax.swing.JTextField();
@@ -37,6 +36,7 @@ public class frmAgregarHoras extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         btnAgregarHoras = new javax.swing.JButton();
         btnCancelarHoras = new javax.swing.JButton();
+        jdFecha = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,9 +45,6 @@ public class frmAgregarHoras extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(102, 102, 102));
         jLabel1.setText("Agregar Horas Sociales");
-
-        txtFechaAgregarHoras.setBackground(new java.awt.Color(204, 204, 204));
-        txtFechaAgregarHoras.setForeground(new java.awt.Color(51, 51, 51));
 
         txtNombreEvento.setBackground(new java.awt.Color(204, 204, 204));
         txtNombreEvento.setForeground(new java.awt.Color(51, 51, 51));
@@ -79,6 +76,8 @@ public class frmAgregarHoras extends javax.swing.JFrame {
         btnCancelarHoras.setForeground(new java.awt.Color(51, 51, 51));
         btnCancelarHoras.setText("Cancelar");
 
+        jdFecha.setBackground(new java.awt.Color(204, 204, 204));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -101,8 +100,9 @@ public class frmAgregarHoras extends javax.swing.JFrame {
                                 .addComponent(btnCancelarHoras, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(38, 38, 38)
                                 .addComponent(btnAgregarHoras, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(txtHoraEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtFechaAgregarHoras, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jdFecha, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtHoraEntrada, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)))))
                 .addContainerGap(270, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -115,8 +115,8 @@ public class frmAgregarHoras extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(84, 84, 84)
-                .addComponent(txtFechaAgregarHoras, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(83, 83, 83)
+                .addComponent(jdFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(txtHoraEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
@@ -198,11 +198,12 @@ public class frmAgregarHoras extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnAgregarHoras;
     public javax.swing.JButton btnCancelarHoras;
+    private com.toedter.calendar.JCalendar jCalendar1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     public javax.swing.JPanel jPanel1;
-    public javax.swing.JTextField txtFechaAgregarHoras;
+    public com.toedter.calendar.JDateChooser jdFecha;
     public javax.swing.JTextField txtHoraEntrada;
     public javax.swing.JTextField txtHoraSalida;
     public javax.swing.JTextField txtNombreEvento;
