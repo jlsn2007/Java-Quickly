@@ -7,7 +7,7 @@ import java.security.NoSuchAlgorithmException;
 
 public class Encriptacion {
     
-    public static String SHA256(String password) {
+    public static String Sha256(String password) {
         
 	try {
 		MessageDigest digest = MessageDigest.getInstance("SHA-256");

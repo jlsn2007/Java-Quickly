@@ -55,12 +55,10 @@ public class frmReestablecercontrasena extends javax.swing.JFrame {
         txtNewcontra.setBackground(new java.awt.Color(233, 233, 233));
         txtNewcontra.setFont(new java.awt.Font("Inter 18pt SemiBold", 0, 12)); // NOI18N
         txtNewcontra.setForeground(new java.awt.Color(102, 102, 102));
-        txtNewcontra.setText("Contraseña");
 
         txtNewcontradnv.setBackground(new java.awt.Color(233, 233, 233));
         txtNewcontradnv.setFont(new java.awt.Font("Inter 18pt SemiBold", 0, 12)); // NOI18N
         txtNewcontradnv.setForeground(new java.awt.Color(102, 102, 102));
-        txtNewcontradnv.setText("Contraseña");
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Inter 24pt ExtraBold", 0, 12)); // NOI18N

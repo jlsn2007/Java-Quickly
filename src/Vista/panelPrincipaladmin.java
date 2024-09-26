@@ -11,9 +11,13 @@ public class panelPrincipaladmin extends javax.swing.JPanel {
         
         panelPrincipaladmin panel = this;
         frmMenuAdmin vista = new frmMenuAdmin();
-        ctrlfrmMenuAdmin controlador = new ctrlfrmMenuAdmin(vista, panel);
+        frmAgregarusuarios vista2 = new frmAgregarusuarios();
+        //panelCalendario panel2 = new panelCalendario();
+        
+        ctrlfrmMenuAdmin controlador = new ctrlfrmMenuAdmin(vista, vista2, panel);
     }
-
+    
+        
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -94,7 +98,7 @@ public class panelPrincipaladmin extends javax.swing.JPanel {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(btnPverus, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btnPverhishoras))
-                                .addContainerGap(62, Short.MAX_VALUE))
+                                .addContainerGap(59, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel2)
@@ -126,7 +130,7 @@ public class panelPrincipaladmin extends javax.swing.JPanel {
                                 .addComponent(btnPverhishoras, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel2)))))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

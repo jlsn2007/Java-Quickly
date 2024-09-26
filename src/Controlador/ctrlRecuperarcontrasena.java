@@ -42,8 +42,12 @@ public class ctrlRecuperarcontrasena implements MouseListener, KeyListener{
             int numeroAleatorio = 1000 + random.nextInt(9000);
 
             String recipient = VistaRecucontrasena.txtCorreorecu.getText();
-            String subject = "Recuperacion de contraseña";
-            String content = "Este es el codigo de recuperacion" + numeroAleatorio;
+            String subject = "¡Hey, Recupera tu contraseña rápido!";
+            String content = "Recuerda guardar tu contraseña en un lugar seguro"
+                    + "para no olvidar de nuevo tu contraseña. "
+                    + ""
+                    + ""
+                    + "Este es el codigo de recuperacion: " + numeroAleatorio;
 
             EnviarCorreos.enviarCorreo(recipient, subject, content);
             

@@ -27,6 +27,13 @@ public class ctrlCodigoverificacion implements MouseListener, KeyListener{
     @Override
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == VisCodigoverificacion.btnVolvercodv) {
+                      
+            Vista.frmRecuperarcontrasena.initfrmRecucontra();
+            VisCodigoverificacion.dispose();
+            
+        }
+        
+        if (e.getSource() == VisCodigoverificacion.btnVerificarcodigo) {
             
             if (VisCodigoverificacion.txtCodigo.getText().isEmpty()) {
 
@@ -34,12 +41,6 @@ public class ctrlCodigoverificacion implements MouseListener, KeyListener{
                 return;
             } 
             
-            Vista.frmRecuperarcontrasena.initfrmRecucontra();
-            VisCodigoverificacion.dispose();
-            
-        }
-        
-        if (e.getSource() == VisCodigoverificacion.btnVerificarcodigo) {
             Vista.frmReestablecercontrasena.initfrmRescontra();
             VisCodigoverificacion.dispose();
             

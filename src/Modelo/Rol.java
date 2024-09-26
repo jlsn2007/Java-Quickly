@@ -43,6 +43,7 @@ public class Rol {
     
     public void CargarComboboxRoles(JComboBox comboBox) {
     Connection conexion = ClaseConexion.getConexion();
+    comboBox.removeAllItems();
    
     try {
         Statement statement = conexion.createStatement();

@@ -4,10 +4,14 @@ import java.sql.*;
 
 public class ClaseConexion {
     
+    //Variables para la cadena de conexión
+    
     private static final String URL = "jdbc:oracle:thin:@localhost:1521:xe";
     private static final String USUARIO = "Quickly";
     private static final String CONTRASENA = "QUICKLY";
 
+    //Creación del metodo de conexión que retorna la conexión
+    
     public static Connection getConexion() {
         try {
             // Cargar el driver JDBC
@@ -15,6 +19,7 @@ public class ClaseConexion {
  
             // Obtener la conexión en una variable
             Connection conexion = DriverManager.getConnection(URL, USUARIO, CONTRASENA);
+            
             // Retornamos la variable que tiene la conexión
             return conexion;
             

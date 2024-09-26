@@ -1,7 +1,8 @@
 package Controlador;
 
+
+import Vista.frmAgregarusuarios;
 import Vista.frmMenuAdmin;
-import Vista.panelAgregarUsuarios;
 import Vista.panelCalendario;
 import Vista.panelConfiguracion;
 import Vista.panelPrincipaladmin;
@@ -11,65 +12,76 @@ import java.awt.event.MouseListener;
 
 public class ctrlfrmMenuAdmin implements MouseListener{
     
-    frmMenuAdmin vista;
-    panelPrincipaladmin Panel;
+    frmMenuAdmin vistaa;
+    frmAgregarusuarios vistaus;
+    panelPrincipaladmin Panelprincipal;
+    panelCalendario Panelcalen;
     
-    public ctrlfrmMenuAdmin(frmMenuAdmin Vista, panelPrincipaladmin panel){
+    
+    public ctrlfrmMenuAdmin(frmMenuAdmin Vista, frmAgregarusuarios Vistaus, panelPrincipaladmin panelprincipal){
         
-        this.vista = Vista;
-        this.Panel = panel;
+        this.vistaa = Vista;
+        //this.Panelcalen = panelcalen; 
+        this.Panelprincipal = panelprincipal;
+        this.vistaus = Vistaus;
         
-        vista.btnHome.addMouseListener(this);
-        vista.btnCalendar.addMouseListener(this);
-        vista.btnSettings.addMouseListener(this);
-        vista.btnmenuagus.addMouseListener(this);
         
-        Panel.btnPagregarus.addMouseListener(this);
-        Panel.btnPasishoras.addMouseListener(this);
-        Panel.btnPverhishoras.addMouseListener(this);
-        Panel.btnPverus.addMouseListener(this);
-        Panel.btnPagregarus.addMouseListener(this);
+        vistaa.btnHome.addMouseListener(this);
+        vistaa.btnCalendar.addMouseListener(this);
+        vistaa.btnSettings.addMouseListener(this);
+        
+        Panelprincipal.btnPagregarus.addMouseListener(this);
+        Panelprincipal.btnPasishoras.addMouseListener(this);
+        Panelprincipal.btnPverhishoras.addMouseListener(this);
+        Panelprincipal.btnPverus.addMouseListener(this);
+        
+//        Panelcalen.btnfrmagregareventos.addMouseListener(this);
+
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
         
-        if(e.getSource() == vista.btnHome){
+        if(e.getSource() == vistaa.btnHome){
             panelPrincipaladmin objpadmin = new panelPrincipaladmin();
             
-            vista.jpContenedor.removeAll();
-            vista.jpContenedor.add(objpadmin);
-            vista.jpContenedor.revalidate();
-            vista.jpContenedor.repaint();
+            vistaa.jpContenedor.removeAll();
+            vistaa.jpContenedor.add(objpadmin);
+            vistaa.jpContenedor.revalidate();
+            vistaa.jpContenedor.repaint();
             
         }
         
-        if(e.getSource() == vista.btnCalendar){
+        if(e.getSource() == vistaa.btnCalendar){
             panelCalendario objcal = new panelCalendario();
             
-            vista.jpContenedor.removeAll();
-            vista.jpContenedor.add(objcal);
-            vista.jpContenedor.revalidate();
-            vista.jpContenedor.repaint();
+            vistaa.jpContenedor.removeAll();
+            vistaa.jpContenedor.add(objcal);
+            vistaa.jpContenedor.revalidate();
+            vistaa.jpContenedor.repaint();
         }
         
-        if(e.getSource() == vista.btnSettings){
+        if(e.getSource() == vistaa.btnSettings){
             panelConfiguracion objconfig = new panelConfiguracion();
             
-            vista.jpContenedor.removeAll();
-            vista.jpContenedor.add(objconfig);
-            vista.jpContenedor.revalidate();
-            vista.jpContenedor.repaint();
+            vistaa.jpContenedor.removeAll();
+            vistaa.jpContenedor.add(objconfig);
+            vistaa.jpContenedor.revalidate();
+            vistaa.jpContenedor.repaint();
+        }
+            
+        if(e.getSource() == Panelprincipal.btnPagregarus){ 
+            Vista.frmAgregarusuarios.initfrmAgregarusuarios();
+            vistaa.dispose();
+            
         }
         
-        if(e.getSource() == vista.btnmenuagus){
-            panelAgregarUsuarios objPanagregarUsuarios = new panelAgregarUsuarios();
+        /*if(e.getSource() == Panelcalen.btnfrmagregareventos){ 
+            Vista.frmAgregareventos.initfrmAgregareventos();
+            vistaa.dispose();
             
-            vista.jpContenedor.removeAll();
-            vista.jpContenedor.add(objPanagregarUsuarios);
-            vista.jpContenedor.revalidate();
-            vista.jpContenedor.repaint();
-        }
+        }*/
+        
     }
 
     @Override

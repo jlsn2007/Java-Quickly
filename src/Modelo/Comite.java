@@ -61,6 +61,7 @@ public class Comite {
     
     public void CargarComboboxComites(JComboBox comboBox) {
     Connection conexion = ClaseConexion.getConexion();
+    comboBox.removeAllItems();
     
     try {
         Statement statement = conexion.createStatement();

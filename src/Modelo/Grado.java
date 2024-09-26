@@ -26,7 +26,7 @@ public class Grado {
     }
     
     
-    //Extras combobox
+    //Extras combobox Grado
     
      public Grado(){
     

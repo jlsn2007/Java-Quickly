@@ -36,25 +36,32 @@ public class ctrlReestablecercontrasena implements MouseListener, KeyListener{
         }
          
         if (e.getSource() == VistafrmRescontra.btnSiguiente) {
-            
-            if (VistafrmRescontra.txtNewcontra.getText().length() < 7) {
+            String nuevaContra = VistafrmRescontra.txtNewcontra.getText();
+            String confirmarContra = VistafrmRescontra.txtNewcontradnv.getText();
 
+            // Validar longitud de la contraseña nueva
+            if (nuevaContra.length() < 7) {
                 JOptionPane.showMessageDialog(VistafrmRescontra, "La contraseña debe tener más de 7 caracteres");
                 return;
             }
-            
-            if (VistafrmRescontra.txtNewcontradnv.getText().length() < 7) {
 
-                JOptionPane.showMessageDialog(VistafrmRescontra, "La contraseña debe tener más de 7 caracteres");
+            // Validar longitud de la confirmación de contraseña
+            if (confirmarContra.length() < 7) {
+                JOptionPane.showMessageDialog(VistafrmRescontra, "La confirmación de la contraseña debe tener más de 7 caracteres");
                 return;
-            } 
-                      
+            }
+
+            // Validar que ambas contraseñas sean iguales
+            if (!nuevaContra.equals(confirmarContra)) {
+                JOptionPane.showMessageDialog(VistafrmRescontra, "Las contraseñas no coinciden, favor de verificarlas");
+                return;
+            }
+
+            // Si pasa todas las validaciones
+            Vista.frmContrasenarestablecida.initfrmContrares();
+            VistafrmRescontra.dispose();
         }
-        
-        else {
-                Vista.frmContrasenarestablecida.initfrmContrares();
-                VistafrmRescontra.dispose();
-            }
+     
     }
 
     @Override
