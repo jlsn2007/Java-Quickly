@@ -54,14 +54,14 @@ public class ctrlLogin implements MouseListener, KeyListener{
             } 
             
             
-            /*boolean comprobar = ModeloUsuario.IniciarSesion();
+            boolean comprobar = ModeloUsuario.IniciarSesion();
             
             if (comprobar == true) {
                 JOptionPane.showMessageDialog(Vistalogin,"¡Bienvenido!");
             } else {
                 JOptionPane.showMessageDialog(Vistalogin, "Usuario inexistente");
 
-            }*/
+            }
             
                 Vista.frmMenuAdmin.initfrmMenuAdmin();
                 Vistalogin.dispose();

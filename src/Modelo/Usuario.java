@@ -278,7 +278,6 @@ public class Usuario {
             //Ejecutar la consulta
             
             newUs.executeUpdate();
-
         } 
         
         catch (SQLException ex) {
