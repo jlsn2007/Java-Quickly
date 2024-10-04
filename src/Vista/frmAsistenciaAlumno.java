@@ -16,7 +16,6 @@ import javax.swing.event.DocumentListener;
 public class frmAsistenciaAlumno extends javax.swing.JFrame {
     
     
-    private javax.swing.JTextField txtBusacarAlumno;
     
     DefaultTableModel mt = new DefaultTableModel();
 
@@ -177,6 +176,8 @@ public class frmAsistenciaAlumno extends javax.swing.JFrame {
             
         });
     }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

@@ -1,6 +1,9 @@
 package Vista;
 
 import Modelo.TextPrompt;
+import javax.swing.border.*;
+
+
 import java.awt.Color;
 
 
@@ -46,7 +49,7 @@ public class frmAgregarHoras extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(102, 102, 102));
         jLabel1.setText("Agregar Horas Sociales");
 
-        txtNombreEvento.setBackground(new java.awt.Color(204, 204, 204));
+        txtNombreEvento.setBackground(new java.awt.Color(102, 102, 102));
         txtNombreEvento.setForeground(new java.awt.Color(51, 51, 51));
         txtNombreEvento.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -54,10 +57,10 @@ public class frmAgregarHoras extends javax.swing.JFrame {
             }
         });
 
-        txtHoraEntrada.setBackground(new java.awt.Color(204, 204, 204));
+        txtHoraEntrada.setBackground(new java.awt.Color(102, 102, 102));
         txtHoraEntrada.setForeground(new java.awt.Color(51, 51, 51));
 
-        txtHoraSalida.setBackground(new java.awt.Color(204, 204, 204));
+        txtHoraSalida.setBackground(new java.awt.Color(102, 102, 102));
         txtHoraSalida.setForeground(new java.awt.Color(51, 51, 51));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -76,7 +79,7 @@ public class frmAgregarHoras extends javax.swing.JFrame {
         btnCancelarHoras.setForeground(new java.awt.Color(51, 51, 51));
         btnCancelarHoras.setText("Cancelar");
 
-        jdFecha.setBackground(new java.awt.Color(204, 204, 204));
+        jdFecha.setBackground(new java.awt.Color(102, 102, 102));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -117,9 +120,9 @@ public class frmAgregarHoras extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(83, 83, 83)
                 .addComponent(jdFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(txtHoraEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
+                .addComponent(txtHoraEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(txtHoraSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

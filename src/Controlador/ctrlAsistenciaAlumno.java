@@ -62,8 +62,8 @@ public class ctrlAsistenciaAlumno {
         ResultSet rs = statement.executeQuery("SELECT * FROM Usuario");
         // Recorremos el ResultSet
         while (rs.next()) {
-            // Aquí puedes poner una condición para establecer la disponibilidad (CheckBox)
-            boolean disponible = rs.getInt("") > 2000; // Ejemplo: Películas lanzadas después del 2000 están disponibles
+            // Aqui� puedes poner una condición para establecer la disponibilidad (CheckBox)
+            boolean disponible = rs.getInt("") > 2000; 
             
             // Llenamos el modelo por cada vez que recorremos el ResultSet
             modeloDatos.addRow(new Object[]{

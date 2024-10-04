@@ -26,6 +26,7 @@ public class frmLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField1 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         txtContrasena = new javax.swing.JTextField();
@@ -34,6 +35,8 @@ public class frmLogin extends javax.swing.JFrame {
         btnSiguiente = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
+        jTextField1.setText("jTextField1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -41,22 +44,22 @@ public class frmLogin extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Inter 24pt Black", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Iniciar SesiÃ³n");
+        jLabel1.setText("Iniciar Sesión");
 
         txtContrasena.setBackground(new java.awt.Color(233, 233, 233));
         txtContrasena.setFont(new java.awt.Font("Inter 18pt SemiBold", 0, 12)); // NOI18N
         txtContrasena.setForeground(new java.awt.Color(102, 102, 102));
-        txtContrasena.setText("ContraseÃ±a");
+        txtContrasena.setText("Contraseña");
 
         txtCorreo.setBackground(new java.awt.Color(233, 233, 233));
         txtCorreo.setFont(new java.awt.Font("Inter 18pt SemiBold", 0, 12)); // NOI18N
         txtCorreo.setForeground(new java.awt.Color(102, 102, 102));
-        txtCorreo.setText("Correo electrÃ³nico");
+        txtCorreo.setText("Correo electrónico");
 
         btntxtRecucontra.setBackground(new java.awt.Color(255, 255, 255));
         btntxtRecucontra.setFont(new java.awt.Font("Inter 18pt Black", 0, 11)); // NOI18N
         btntxtRecucontra.setForeground(new java.awt.Color(43, 180, 205));
-        btntxtRecucontra.setText("Â¿Olvidaste tu contraseÃ±a?");
+        btntxtRecucontra.setText("¿Olvidaste tu contraseña?");
         btntxtRecucontra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btntxtRecucontraActionPerformed(evt);
@@ -176,6 +179,7 @@ public class frmLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
     public javax.swing.JTextField txtContrasena;
     public javax.swing.JTextField txtCorreo;
     // End of variables declaration//GEN-END:variables
