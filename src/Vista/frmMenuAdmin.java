@@ -59,7 +59,7 @@ public class frmMenuAdmin extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpMenu, javax.swing.GroupLayout.DEFAULT_SIZE, 908, Short.MAX_VALUE)
+            .addComponent(jpMenu, javax.swing.GroupLayout.DEFAULT_SIZE, 950, Short.MAX_VALUE)
             .addComponent(jpContenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
